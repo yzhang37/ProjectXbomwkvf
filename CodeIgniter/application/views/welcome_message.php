@@ -68,17 +68,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>欢迎使用开心盒子</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p>使用开心盒子，让您给更多好友带来真正的快乐。</p>
 
 		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
 		<code>application/controllers/Welcome.php</code>
-
+		<p>已经有账号了？ <button>立即登录</button></p>
+		<p>还没有账号？<button>立即注册</button></p>
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
