@@ -12,6 +12,8 @@
 					value="<?php echo set_value('reg_nickname');?>"></input></li>
 				<li>密码：<input type="password" name="reg_password" placeholder="请输入密码"></input></li>
 				<li>密码：<input type="password" name="reg_passconf" placeholder="请再次输入密码"></input></li>
+				<li>性别：<input type="radio" name="reg_gender" value="M">M</input>
+					<input input type="radio" name="reg_gender" value="F"/> </li>
 				<li><input type="submit" name="reg_submit" value="注册"/></li>
 				<li>已经拥有了账号？<a href="<?php echo site_url('login');?>">立即登录</a></li>
 			</ul>

@@ -21,7 +21,6 @@ class Login extends CI_Controller
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			//如果没有输入完整，就会跳转到这里
 			$this->load->view('login');
 		}
 		else

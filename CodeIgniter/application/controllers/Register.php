@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Register extends CI_Controller
 {
-	
 	public function index()
 	{
 		$this->load->helper(array('url', 'form'));
@@ -22,13 +21,27 @@ class Register extends CI_Controller
 		}
 		else
 		{
-			
+			$hits->load->database();
+			$query_str = 'INSERT INTO user (uid, unickname, upassword, uemail, ugender, ustatus, usys)';
 		}
 		
 	}
-	private function view_check()
+	private function email_check($username)
 	{
+		$this->load->database();
+		$username = strtolower($username);
+		$query_str = 'SELECT uid, uemail FROM user WHERE LOWER(uemail) = ?';
+		$query_obj = $this->db->query($query_str, array($username));
 		
+		if ($query_obj->num_rows() == 0)
+		{
+			
+		}
+		else
+		{
+			$this->form_validation->set_message('email_check', 'lang:existed_user');
+			return FALSE;
+		}
 	}
 }
 ?>
